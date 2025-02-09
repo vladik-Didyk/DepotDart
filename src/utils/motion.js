@@ -16,7 +16,7 @@ export const fadeIn = (direction, type, delay, duration) => {
   const y = direction === "up" ? 100 : direction === "down" ? -100 : 0;
 
   return {
-    hidden: { x, y, opacity: 0 },
+    hidden: { x, y, opacity: 1 },
     show: {
       x: 0,
       y: 0,
@@ -32,7 +32,7 @@ export const fadeIn = (direction, type, delay, duration) => {
 };
 
 export const zoomIn = (delay, duration) => ({
-  hidden: { scale: 0, opacity: 0 },
+  hidden: { scale: 0, opacity: 1 },
   show: {
     scale: 1,
     opacity: 1,
