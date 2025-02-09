@@ -1,12 +1,13 @@
 {
   "name": "depotdart",
-  
+  "homepage": "https://vladik-Didyk.github.io/DepotDart",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "vite dist/index.html",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
