@@ -27,8 +27,18 @@ const Navbar = () => {
           className={`${
             active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
           } hover:text-white text-[20px] font-medium cursor-pointer`}
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
+            console.log(`Navigating to: ${link.id}`);
             setActive(link.title);
+            
+            const element = document.getElementById(link.id);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              console.warn(`Section with id "${link.id}" not found`);
+            }
+            
             if (isSecondary) {
               setToggle(false);
             }
